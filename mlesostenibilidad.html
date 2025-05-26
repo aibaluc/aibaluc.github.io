@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Encuesta sobre Sostenibilidad en la Ropa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f4f4;
+    }
+    form {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 900px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    fieldset {
+      margin-bottom: 25px;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    legend {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin: 10px 0;
+    }
+    input[type="submit"] {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 30px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #resultado {
+      text-align: center;
+      font-size: 1.3em;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<h1 style="text-align:center;">Encuesta sobre Sostenibilidad en la Ropa</h1>
+<form id="encuesta">
+
+
+  <fieldset>
+    <legend><u>Compra de ropa</u></legend>
+
+    <label>1. ¿Con qué frecuencia compras ropa nueva?</label>
+    <label><input type="radio" name="frecuencia" value="0"> Más de una vez al mes</label>
+    <label><input type="radio" name="frecuencia" value="1"> Una vez al mes</label>
+    <label><input type="radio" name="frecuencia" value="2"> Cada pocos meses</label>
+    <label><input type="radio" name="frecuencia" value="3"> Solo cuando es necesario</label>
+    <br>
+    <label>2. ¿Dónde compras la mayoría de tu ropa?</label>
+    <label><input type="radio" name="origen" value="0"> Grandes cadenas de moda</label>
+    <label><input type="radio" name="origen" value="2"> Marcas sostenibles o ecológicas</label>
+    <label><input type="radio" name="origen" value="2"> Segunda mano / tiendas vintage</label>
+    <label><input type="radio" name="origen" value="1"> En línea</label>
+    <label><input type="radio" name="origen" value="1"> Otros</label>
+    <br>
+    <label>3. ¿Qué factores consideras más importantes al comprar ropa? (elige 3 opciones)</label>
+    <label><input type="checkbox" name="factores" value="0" class="limitar-factores"> Precio</label>
+    <label><input type="checkbox" name="factores" value="0" class="limitar-factores"> Estilo/diseño</label>
+    <label><input type="checkbox" name="factores" value="1" class="limitar-factores"> Calidad</label>
+    <label><input type="checkbox" name="factores" value="2" class="limitar-factores"> Origen sostenible</label>
+    <label><input type="checkbox" name="factores" value="2" class="limitar-factores"> Materiales orgánicos</label>
+    <label><input type="checkbox" name="factores" value="2" class="limitar-factores"> Producción ética</label>
+    <label><input type="checkbox" name="factores" value="1" class="limitar-factores"> Marca</label>
+    <br>
+    <label>4. ¿Revisas si la ropa tiene certificaciones sostenibles?</label>
+    <label><input type="radio" name="certificaciones" value="2"> Siempre</label>
+    <label><input type="radio" name="certificaciones" value="1"> A veces</label>
+    <label><input type="radio" name="certificaciones" value="0"> Nunca</label>
+    <label><input type="radio" name="certificaciones" value="0"> No sé qué significan</label>
+    <br>
+    <label>5. ¿Estás dispuesto(a) a pagar más por ropa sostenible?</label>
+    <label><input type="radio" name="pago_extra" value="2"> Sí, sin duda</label>
+    <label><input type="radio" name="pago_extra" value="1"> Depende de la diferencia</label>
+    <label><input type="radio" name="pago_extra" value="0"> No, prefiero la opción barata</label>
+    <br>
+</fieldset>
+
+
+  <fieldset>
+    <legend><u>Uso y reciclaje de la ropa</u></legend>
+
+    <label>6. ¿Qué haces con la ropa que ya no usas?</label>
+    <label><input type="radio" name="fin_ropa" value="2"> La dono / La regalo</label>
+    <label><input type="radio" name="fin_ropa" value="2"> La vendo</label>
+    <label><input type="radio" name="fin_ropa" value="2"> La transformo o reparo</label>
+    <label><input type="radio" name="fin_ropa" value="0"> La tiro a la basura</label>
+    <label><input type="radio" name="fin_ropa" value="1"> La dejo en el armario</label>
+    <br>
+    <label>7. ¿Has intentado reparar ropa en lugar de desecharla?</label>
+    <label><input type="radio" name="reparar" value="2"> Sí, frecuentemente</label>
+    <label><input type="radio" name="reparar" value="1"> Sí, alguna vez</label>
+    <label><input type="radio" name="reparar" value="0"> No, nunca</label>
+    <br>
+    <label>8. ¿Cuánta ropa de segunda mano tienes en tu armario?</label>
+    <label><input type="radio" name="segunda_mano" value="3"> Toda o casi toda</label>
+    <label><input type="radio" name="segunda_mano" value="2"> Una gran parte</label>
+    <label><input type="radio" name="segunda_mano" value="1"> Alguna que otra prenda</label>
+    <label><input type="radio" name="segunda_mano" value="0"> Ninguna</label>
+  </fieldset>
+  <br>
+
+  <fieldset>
+    <legend><u>Conocimientos y percepción</u></legend>
+
+    <label>9. ¿Conoces el concepto de “moda sostenible”?</label>
+    <label><input type="radio" name="concepto" value="2"> Sí, completamente</label>
+    <label><input type="radio" name="concepto" value="1"> He oído hablar, pero no sé mucho</label>
+    <label><input type="radio" name="concepto" value="0"> No, no lo conozco</label>
+    <br>
+
+    <label>10. ¿Cuál consideras que es el principal obstáculo para comprar ropa sostenible?</label>
+    <label><input type="radio" name="obstaculo" value="1"> Precio</label>
+    <label><input type="radio" name="obstaculo" value="2"> Falta de opciones sostenibles atractivas</label>
+    <label><input type="radio" name="obstaculo" value="2"> Dificultad para encontrar marcas confiables</label>
+    <label><input type="radio" name="obstaculo" value="2"> Desinformación</label>
+    <label><input type="radio" name="obstaculo" value="0"> No me interesa </label>
+    <br>
+    <label>11. ¿Cuánto te preocupa el impacto ambiental de la moda? (1–5)</label>
+    <label><input type="radio" name="impacto" value="0"> 1 (Nada)</label>
+    <label><input type="radio" name="impacto" value="1"> 2</label>
+    <label><input type="radio" name="impacto" value="2"> 3</label>
+    <label><input type="radio" name="impacto" value="3"> 4</label>
+    <label><input type="radio" name="impacto" value="4"> 5 (Mucho)</label>
+  </fieldset>
+
+  <input type="submit" value="Enviar encuesta">
+</form>
+
+<div id="resultado"></div>
+
+<script>
+    document.querySelectorAll('input.limitar-factores').forEach(function(checkbox) {
+      checkbox.addEventListener('change', function() {
+        const seleccionados = document.querySelectorAll('input.limitar-factores:checked');
+        if (seleccionados.length > 3) {
+          this.checked = false;
+          alert("Solo puedes seleccionar hasta 3 opciones.");
+        }
+      });
+    });
+  </script>
+
+<script>
+    document.getElementById('encuesta').addEventListener('submit', function(e) {
+      e.preventDefault();
+      let puntaje = 0;
+      let totalPosible = 30;
+  
+      function sumarRadio(name) {
+        const seleccionado = document.querySelector(`input[name="${name}"]:checked`);
+        return seleccionado ? parseInt(seleccionado.value) : 0;
+      }
+  
+      function sumarCheckbox(name) {
+        let suma = 0;
+        document.querySelectorAll(`input[name="${name}"]:checked`).forEach(el => {
+          suma += parseInt(el.value);
+        });
+        return suma;
+      }
+  
+      puntaje += sumarRadio("frecuencia");
+      puntaje += sumarRadio("origen");
+      puntaje += sumarCheckbox("factores");
+      puntaje += sumarRadio("concepto");
+      puntaje += sumarRadio("certificaciones");
+      puntaje += sumarRadio("pago_extra");
+      puntaje += sumarCheckbox("fin_ropa");
+      puntaje += sumarRadio("reparar");
+      puntaje += sumarRadio("segunda_mano");
+      puntaje += sumarRadio("obstaculo");
+      puntaje += sumarRadio("impacto");
+  
+      const notaFinal = Math.min((puntaje / totalPosible) * 10, 10).toFixed(1);
+  
+      // Redirige a la página de resultados con la nota como parámetro
+      window.location.href = `resultado.html?nota=${notaFinal}`;
+    });
+  </script>
+  

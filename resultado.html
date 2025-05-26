@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Resultado de tu encuesta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      text-align: center;
+      padding: 50px;
+    }
+    .resultado {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+    .nota {
+      font-size: 2em;
+      font-weight: bold;
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+  <div class="resultado">
+    <h1>Tu resultado de sostenibilidad</h1>
+    <p class="nota" id="nota"></p>
+    <p id="mensaje"></p>
+    <p id="link"></p>
+    <a href="mejorassostenibilidad.html">¿Quieres mejorar tu sostenibilidad?</a>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const nota = parseFloat(params.get('nota'));
+
+    let mensaje = '';
+    if (nota >= 8) {
+      mensaje = "🌟 ¡Excelente! Tienes hábitos muy sostenibles. Sigue así.";
+    } 
+    else if(nota>=6.5){
+        mensaje="✅ ¡Bien hecho! Te implicas en el uso sostenible de ropa, aunque puedes mejorar algunos detalles.";
+    }
+    else if (nota >= 5) {
+      mensaje = "♻️ Vas por buen camino, pero puedes mejorar en algunas áreas.";
+    } 
+    else if(nota >=3.5){
+      mensaje = "🔄 Se nota el esfuerzo, pero hacer un mejor uso y compra de nuestra ropa nos ayudaría a todos.";
+    }
+    else {
+      mensaje = "✗ Hay muchas oportunidades para que tu consumo sea más responsable...";
+      
+    }
+
+document.getElementById('nota').innerText = `Puntuación: ${nota}/10`;
+document.getElementById('mensaje').innerText = mensaje;
+
+
+  </script>
+</body>
+</html>
