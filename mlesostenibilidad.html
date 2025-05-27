@@ -10,23 +10,34 @@
       background-color: #d2f7d2;
     }
     form {
-    background-color: #ffffff;
-    border: 1px solid #d9d9d9;
-      padding: 30px;
-      border-radius: 10px;
-      max-width: 900px;
-      margin: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    fieldset {
-      margin-bottom: 25px;
-      border: 1px solid #070000;
-      padding: 15px;
-      border-radius: 8px;
-    }
-    legend {
-      font-weight: bold;
-    }
+  background-color: transparent; 
+  border: none;
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+fieldset {
+  background-color: #ffffff; 
+  margin-bottom: 40px;
+  border: 1px solid #070000;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+}
+fieldset {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+fieldset:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+legend {
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 0 10px;
+  color: #138231;
+}
     label {
       display: block;
       margin: 10px 0;
